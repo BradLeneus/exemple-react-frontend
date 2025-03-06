@@ -1,0 +1,13 @@
+FROM  node:23-alpine
+
+LABEL version= "1.0" maintainer = "6243042@collegemv.qc.ca"
+
+WORKDIR /app
+
+COPY . . 
+
+RUN npm install 
+
+EXPOSE  5173
+
+CMD  ["npm","run" ,"dev"]
